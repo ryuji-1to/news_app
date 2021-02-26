@@ -11,3 +11,9 @@ export type NEWS_DATA = {
   publishedAt: string;
   content: string;
 };
+
+export type Data = {
+  status: string;
+  totalResults: number;
+  articles: NEWS_DATA[];
+};

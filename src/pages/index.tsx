@@ -1,10 +1,10 @@
-import { Stack } from '@chakra-ui/react';
+import { Box } from '@chakra-ui/react';
 import { fetchData } from 'api';
 import { GetStaticProps } from 'next';
 import React from 'react';
-import { NEWS_DATA } from 'types';
 
-import NewsCard from '../components/NewsCard';
+import NewsFeed from '../components/NewsFeed';
+import { Data } from '../types';
 
 export const getStaticProps: GetStaticProps = async () => {
   const data = await fetchData();
@@ -17,21 +17,14 @@ export const getStaticProps: GetStaticProps = async () => {
   };
 };
 
-type Data = {
-  status: string;
-  totalResults: number;
-  articles: NEWS_DATA[];
-};
-
 type Props = {
   data: Data;
 };
 
 const About: React.FC<Props> = ({ data }) => (
-  <Stack as="main" spacing={5}>
-    {data?.articles.map((article) => (
-      <NewsCard article={article} />
-    ))}
-  </Stack>
+  <Box as="main" height="100vh">
+    <NewsFeed data={data} />
+  </Box>
 );
+
 export default About;

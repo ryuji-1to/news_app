@@ -7,8 +7,18 @@ type Props = {
 };
 
 const NewsCard: React.FC<Props> = ({ article }) => (
-  <Flex as="a" href={article.url}>
-    <Image src={article.urlToImage || '/noimage.jpg'} w="300px" mr={3} />
+  <Flex
+    as="a"
+    href={article.url}
+    target="_brank"
+    rel="noopener noreferrer"
+    border="1px solid"
+    borderColor="gray.300"
+    width="80%"
+    maxWidth="850px"
+    minWidth="500px"
+  >
+    <Image src={article.urlToImage || '/noimage.jpg'} w="250px" mr={3} />
     <Flex direction="column" justify="space-around">
       <Text as="h4" fontWeight="bold" fontSize="18px">
         {article.title || 'タイトルなし'}
