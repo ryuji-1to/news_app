@@ -2,12 +2,12 @@ import { Box } from '@chakra-ui/react';
 import { fetchData } from 'api';
 import { GetStaticProps } from 'next';
 import React from 'react';
+import { Data } from 'types';
 
 import NewsFeed from '../components/NewsFeed';
-import { Data } from '../types';
 
 export const getStaticProps: GetStaticProps = async () => {
-  const data = await fetchData();
+  const data = await fetchData('science');
 
   return {
     props: {
@@ -21,10 +21,10 @@ type Props = {
   data: Data;
 };
 
-const About: React.VFC<Props> = ({ data }) => (
+const Sports: React.FC<Props> = ({ data }) => (
   <Box as="main" height="100vh">
     <NewsFeed data={data} />
   </Box>
 );
 
-export default About;
+export default Sports;
