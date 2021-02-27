@@ -13,14 +13,14 @@ const NewsCard: React.FC<Props> = ({ article }) => (
     target="_brank"
     rel="noopener noreferrer"
     border="1px solid"
-    borderColor="gray.300"
+    borderColor="colorPrimary"
     width="80%"
     maxWidth="850px"
     minWidth="500px"
   >
     <Image src={article.urlToImage || '/noimage.jpg'} w="250px" mr={3} />
     <Flex direction="column" justify="space-around">
-      <Text as="h4" fontWeight="bold" fontSize="18px">
+      <Text as="h4" fontWeight="bold" fontSize="lengthMd1">
         {article.title || 'タイトルなし'}
       </Text>
       <Text>{article.description}</Text>
