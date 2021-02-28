@@ -1,4 +1,4 @@
-import { Box, Flex } from '@chakra-ui/react';
+import { Flex } from '@chakra-ui/react';
 import React, { ReactNode } from 'react';
 
 import Nav from './Nav';
@@ -22,7 +22,7 @@ const Layout: React.VFC<Props> = ({
   isHealthPage,
   isGeneralPage,
 }) => (
-  <Flex height="100vh" overflow="hidden" py={5}>
+  <Flex h="100vh" w="100vw" maxW="1000px" overflow="hidden" mx="auto" p={5}>
     <Nav
       isSportsPage={isSportsPage}
       isHealthPage={isHealthPage}
@@ -31,7 +31,7 @@ const Layout: React.VFC<Props> = ({
       isTechnologyPage={isTechnologyPage}
       isEntertainmentPage={isEntertainmentPage}
     />
-    <Box as="main">{children}</Box>
+    {children}
   </Flex>
 );
 

@@ -16,9 +16,6 @@ const NewsCard: React.FC<Props> = ({ article }) => (
     border="1px solid"
     borderColor="colorPrimary"
     borderRadius={10}
-    width="80vw"
-    maxWidth="850px"
-    minWidth="500px"
     h="200px"
   >
     <Image

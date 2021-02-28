@@ -9,7 +9,7 @@ type Props = {
 };
 
 const NewsFeed: React.FC<Props> = ({ data }) => (
-  <Stack spacing={5} height="100%" overflow="auto">
+  <Stack spacing={5} height="100%" overflow="auto" flex="1">
     {data?.articles?.map((article) => (
       <NewsCard article={article} key={article.source.id} />
     ))}
