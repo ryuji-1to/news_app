@@ -9,23 +9,27 @@ type Props = {
 const NewsCard: React.FC<Props> = ({ article }) => (
   <Flex
     as="a"
-    key={article.source.id}
     href={article.url}
+    key={article.source.id}
     target="_brank"
     rel="noopener noreferrer"
     border="1px solid"
     borderColor="colorPrimary"
+    borderRadius={10}
     width="80vw"
     maxWidth="850px"
     minWidth="500px"
+    h="200px"
   >
     <Image
       src={article.urlToImage || '/noimage.jpg'}
       borderRight="1px solid lightgray"
+      borderLeftRadius={9}
+      objectFit="cover"
       w="250px"
       mr={3}
     />
-    <Flex direction="column" justify="space-around" p={2}>
+    <Flex direction="column" p={2} h="100px" overflow="hidden">
       <Text as="h4" fontWeight="bold" fontSize="lengthMd1">
         {article.title || 'タイトルなし'}
       </Text>

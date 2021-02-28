@@ -22,12 +22,12 @@ const Layout: React.VFC<Props> = ({
   isHealthPage,
   isGeneralPage,
 }) => (
-  <Flex height="100vh">
+  <Flex height="100vh" overflow="hidden" py={5}>
     <Nav
-      isGeneralPage={isGeneralPage}
-      isSciencePage={isSciencePage}
       isSportsPage={isSportsPage}
       isHealthPage={isHealthPage}
+      isGeneralPage={isGeneralPage}
+      isSciencePage={isSciencePage}
       isTechnologyPage={isTechnologyPage}
       isEntertainmentPage={isEntertainmentPage}
     />

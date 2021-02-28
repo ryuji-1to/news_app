@@ -19,7 +19,7 @@ const Nav: React.VFC<Props> = ({
   isHealthPage,
   isGeneralPage,
 }) => {
-  const info = [
+  const pageInfo = [
     {
       href: '/',
       isWhere: isGeneralPage,
@@ -53,8 +53,8 @@ const Nav: React.VFC<Props> = ({
   ];
 
   return (
-    <Stack p={5} spacing={5}>
-      {info.map(({ href, isWhere, LinkName }) => (
+    <Stack as="nav" px={5} spacing={5}>
+      {pageInfo.map(({ href, isWhere, LinkName }) => (
         <NextLink href={href} key={href}>
           <Link
             textAlign="center"
