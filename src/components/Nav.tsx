@@ -62,7 +62,7 @@ const Nav: React.VFC<Props> = ({
             border={isWhere ? '1px solid' : '1px solid gray'}
             fontWeight={isWhere ? 'bold' : 'normal'}
             borderRadius={5}
-            px={3}
+            p={3}
             py={1}
           >
             {LinkName}
