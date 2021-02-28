@@ -1,8 +1,8 @@
-import { Box } from '@chakra-ui/react';
 import { fetchData } from 'api';
 import { GetStaticProps } from 'next';
 import React from 'react';
 
+import Layout from '../components/Layout';
 import NewsFeed from '../components/NewsFeed';
 import { Data } from '../types';
 
@@ -22,9 +22,9 @@ type Props = {
 };
 
 const About: React.VFC<Props> = ({ data }) => (
-  <Box as="main" height="100vh">
+  <Layout isGeneralPage>
     <NewsFeed data={data} />
-  </Box>
+  </Layout>
 );
 
 export default About;

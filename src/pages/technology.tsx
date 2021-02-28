@@ -1,9 +1,9 @@
-import { Box } from '@chakra-ui/react';
 import { fetchData } from 'api';
 import { GetStaticProps } from 'next';
 import React from 'react';
 import { Data } from 'types';
 
+import Layout from '../components/Layout';
 import NewsFeed from '../components/NewsFeed';
 
 export const getStaticProps: GetStaticProps = async () => {
@@ -22,9 +22,9 @@ type Props = {
 };
 
 const Sports: React.FC<Props> = ({ data }) => (
-  <Box as="main" height="100vh">
+  <Layout isTechnologyPage>
     <NewsFeed data={data} />
-  </Box>
+  </Layout>
 );
 
 export default Sports;
