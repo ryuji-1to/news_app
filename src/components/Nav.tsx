@@ -1,6 +1,9 @@
 import { Link, Stack } from '@chakra-ui/react';
+import { createPageInfo } from 'api';
 import NextLink from 'next/link';
 import React from 'react';
+
+import SelectMenu from './SelectMenu';
 
 type Props = {
   isGeneralPage?: boolean;
@@ -12,48 +15,32 @@ type Props = {
 };
 
 const Nav: React.VFC<Props> = ({
+  isGeneralPage,
   isSportsPage,
   isSciencePage,
+  isHealthPage,
   isTechnologyPage,
   isEntertainmentPage,
-  isHealthPage,
-  isGeneralPage,
 }) => {
-  const pageInfo = [
-    {
-      href: '/',
-      isWhere: isGeneralPage,
-      LinkName: 'General',
-    },
-    {
-      href: '/sports',
-      isWhere: isSportsPage,
-      LinkName: 'Sports',
-    },
-    {
-      href: '/science',
-      isWhere: isSciencePage,
-      LinkName: 'Science',
-    },
-    {
-      href: '/health',
-      isWhere: isHealthPage,
-      LinkName: 'Health',
-    },
-    {
-      href: '/technology',
-      isWhere: isTechnologyPage,
-      LinkName: 'Technology',
-    },
-    {
-      href: '/entertainment',
-      isWhere: isEntertainmentPage,
-      LinkName: 'Entertainment',
-    },
-  ];
+  const pageInfo = createPageInfo({
+    isGeneralPage,
+    isSportsPage,
+    isSciencePage,
+    isHealthPage,
+    isTechnologyPage,
+    isEntertainmentPage,
+  });
 
   return (
     <Stack as="nav" px={5} spacing={5}>
+      <SelectMenu
+        isSportsPage={isSportsPage}
+        isHealthPage={isHealthPage}
+        isGeneralPage={isGeneralPage}
+        isSciencePage={isSciencePage}
+        isTechnologyPage={isTechnologyPage}
+        isEntertainmentPage={isEntertainmentPage}
+      />
       {pageInfo.map(({ href, isWhere, LinkName }) => (
         <NextLink href={href} key={href}>
           <Link

@@ -17,6 +17,7 @@ const NewsCard: React.FC<Props> = ({ article }) => (
     borderColor="colorPrimary"
     borderRadius={10}
     h="200px"
+    _last={{ mb: 5 }}
   >
     <Image
       src={article.urlToImage || '/noimage.jpg'}

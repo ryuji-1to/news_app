@@ -37,3 +37,18 @@ export type Theme = {
     lengthLg3: string;
   };
 };
+
+export type Page = {
+  isGeneralPage: boolean | undefined;
+  isSportsPage: boolean | undefined;
+  isSciencePage: boolean | undefined;
+  isHealthPage: boolean | undefined;
+  isTechnologyPage: boolean | undefined;
+  isEntertainmentPage: boolean | undefined;
+};
+
+export type PageInfo = {
+  href: string;
+  isWhere: boolean | undefined;
+  LinkName: string;
+};
