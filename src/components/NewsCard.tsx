@@ -28,7 +28,7 @@ const NewsCard: React.FC<Props> = ({ article }) => (
       mr={3}
     />
     <Flex direction="column" p={2} h="100px" overflow="hidden">
-      <Text as="h4" fontWeight="bold" fontSize="lengthMd1">
+      <Text as="h4" fontWeight="bold" fontSize={['lengthMd1', 'lengthMd2', 'lengthMd1']}>
         {article.title || 'タイトルなし'}
       </Text>
       <Text>{article.description}</Text>

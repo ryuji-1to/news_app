@@ -37,6 +37,7 @@ const SelectMenu: React.FC<Props> = ({
         border="1px solid"
         color="blue.400"
         borderRadius={5}
+        py={1}
         rightIcon={<ChevronDownIcon />}
       >
         {pageInfo.map(({ isWhere, LinkName }) => isWhere && LinkName)}
