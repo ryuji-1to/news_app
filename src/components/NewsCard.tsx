@@ -22,7 +22,6 @@ const NewsCard: React.FC<Props> = ({ article }) => (
     <Image
       src={article.urlToImage}
       fallbackSrc="/noimage.jpg"
-      borderRight="1px solid lightgray"
       borderLeftRadius={9}
       boxSize={['120px', '200px']}
       objectFit="cover"
