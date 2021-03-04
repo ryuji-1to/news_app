@@ -24,15 +24,15 @@ const NewsCard: React.FC<Props> = ({ article }) => (
       fallbackSrc="/noimage.jpg"
       borderRight="1px solid lightgray"
       borderLeftRadius={9}
-      boxSize="200px"
+      boxSize={['120px', '200px']}
       objectFit="cover"
       mr={3}
     />
-    <Flex direction="column" p={2} h="100px" overflow="hidden">
-      <Text as="h4" fontWeight="bold" fontSize={['lengthSm2', 'lengthMd1']}>
+    <Flex direction="column" p={2} h="100px" overflow="auto">
+      <Text as="h4" fontWeight="bold" fontSize={['16px', 'lengthMd1']}>
         {article.title || 'タイトルなし'}
       </Text>
-      <Text>{article.description}</Text>
+      <Text d={['none', 'block']}>{article.description}</Text>
     </Flex>
   </Flex>
 );

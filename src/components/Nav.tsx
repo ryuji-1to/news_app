@@ -33,7 +33,14 @@ const Nav: React.VFC<Props> = ({
   });
 
   return (
-    <Stack as="nav" px={5} spacing={5}>
+    <Stack
+      as="nav"
+      px={5}
+      py={[5, 0]}
+      spacing={5}
+      direction={['row', 'column']}
+      justify={['space-between', 'start']}
+    >
       <DarkModeSwitch />
       <SelectMenu
         isSportsPage={isSportsPage}
