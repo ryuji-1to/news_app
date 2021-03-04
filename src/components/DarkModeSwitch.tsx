@@ -6,7 +6,7 @@ const DarkModeSwitch: React.FC = () => {
   const { colorMode, toggleColorMode } = useColorMode();
 
   return (
-    <Flex align="center" display={['block', 'none', 'block']}>
+    <Flex align="center">
       <Switch size="lg" isChecked={colorMode === 'dark'} onChange={toggleColorMode} mr={3} />
       {colorMode === 'dark' ? (
         <MoonIcon onClick={toggleColorMode} />

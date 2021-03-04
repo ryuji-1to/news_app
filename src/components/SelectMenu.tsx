@@ -41,6 +41,7 @@ const SelectMenu: React.FC<Props> = ({
         borderRadius={5}
         w="150px"
         py={1}
+        d={['block', 'block', 'none']}
       >
         {pageInfo.map(({ isWhere, LinkName }) => isWhere && LinkName)}
       </MenuButton>

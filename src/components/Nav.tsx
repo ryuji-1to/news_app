@@ -1,9 +1,9 @@
-import { Link, Stack } from '@chakra-ui/react';
+import { Stack } from '@chakra-ui/react';
 import { createPageInfo } from 'api';
-import NextLink from 'next/link';
 import React from 'react';
 
 import DarkModeSwitch from './DarkModeSwitch';
+import LinkMenu from './LinkMenu';
 import SelectMenu from './SelectMenu';
 
 type Props = {
@@ -43,21 +43,7 @@ const Nav: React.VFC<Props> = ({
         isTechnologyPage={isTechnologyPage}
         isEntertainmentPage={isEntertainmentPage}
       />
-      {pageInfo.map(({ href, isWhere, LinkName }) => (
-        <NextLink href={href} key={href}>
-          <Link
-            textAlign="center"
-            color={isWhere ? 'blue.500' : undefined}
-            border={isWhere ? '1px solid' : '1px solid gray'}
-            fontWeight={isWhere ? 'bold' : 'normal'}
-            borderRadius={5}
-            p={3}
-            py={1}
-          >
-            {LinkName}
-          </Link>
-        </NextLink>
-      ))}
+      <LinkMenu pageInfo={pageInfo} />
     </Stack>
   );
 };
