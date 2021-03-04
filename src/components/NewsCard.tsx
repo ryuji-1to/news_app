@@ -13,22 +13,23 @@ const NewsCard: React.FC<Props> = ({ article }) => (
     key={article.source.id}
     target="_brank"
     rel="noopener noreferrer"
+    h="100%"
     border="1px solid"
     borderColor="colorPrimary"
     borderRadius={10}
-    h="200px"
     _last={{ mb: 5 }}
   >
     <Image
-      src={article.urlToImage || '/noimage.jpg'}
+      src={article.urlToImage}
+      fallbackSrc="/noimage.jpg"
       borderRight="1px solid lightgray"
       borderLeftRadius={9}
+      boxSize="200px"
       objectFit="cover"
-      w="250px"
       mr={3}
     />
     <Flex direction="column" p={2} h="100px" overflow="hidden">
-      <Text as="h4" fontWeight="bold" fontSize={['lengthMd1', 'lengthMd2', 'lengthMd1']}>
+      <Text as="h4" fontWeight="bold" fontSize={['lengthSm2', 'lengthMd1']}>
         {article.title || 'タイトルなし'}
       </Text>
       <Text>{article.description}</Text>
