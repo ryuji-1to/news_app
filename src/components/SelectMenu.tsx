@@ -1,5 +1,5 @@
 import { ChevronDownIcon } from '@chakra-ui/icons';
-import { Menu, MenuButton, MenuItem, MenuList } from '@chakra-ui/react';
+import { Button, Menu, MenuButton, MenuItem, MenuList } from '@chakra-ui/react';
 import { createPageInfo } from 'api';
 import { useRouter } from 'next/dist/client/router';
 import React from 'react';
@@ -34,11 +34,12 @@ const SelectMenu: React.FC<Props> = ({
   return (
     <Menu>
       <MenuButton
+        as={Button}
+        rightIcon={<ChevronDownIcon />}
         border="1px solid"
         color="blue.400"
         borderRadius={5}
         py={1}
-        rightIcon={<ChevronDownIcon />}
       >
         {pageInfo.map(({ isWhere, LinkName }) => isWhere && LinkName)}
       </MenuButton>
