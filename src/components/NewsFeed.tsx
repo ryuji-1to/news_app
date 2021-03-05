@@ -1,11 +1,11 @@
 import { Stack } from '@chakra-ui/react';
 import React from 'react';
-import { Data } from 'types';
+import { DATA } from 'types';
 
 import NewsCard from './NewsCard';
 
 type Props = {
-  data: Data;
+  data: DATA;
 };
 
 const NewsFeed: React.FC<Props> = ({ data }) => (

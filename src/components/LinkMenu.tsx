@@ -7,7 +7,7 @@ type Props = {
   pageInfo: PAGE_INFO[];
 };
 
-const LinkMenu: React.FC<Props> = ({ pageInfo }) => (
+const LinkMenu: React.VFC<Props> = ({ pageInfo }) => (
   <Stack spacing={5} d={['none', 'none', 'flex']}>
     {pageInfo.map(({ href, isWhere, LinkName }) => (
       <NextLink href={href} key={href}>

@@ -6,7 +6,7 @@ type Props = {
   article: NEWS_DATA;
 };
 
-const NewsCard: React.FC<Props> = ({ article }) => (
+const NewsCard: React.VFC<Props> = ({ article }) => (
   <Flex
     as="a"
     href={article.url}

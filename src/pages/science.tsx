@@ -20,6 +20,6 @@ type Props = {
   data: DATA;
 };
 
-const Sports: React.FC<Props> = ({ data }) => <Layout isSciencePage data={data} />;
+const Sports: React.VFC<Props> = ({ data }) => <Layout isSciencePage data={data} />;
 
 export default Sports;

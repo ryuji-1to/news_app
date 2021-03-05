@@ -6,7 +6,7 @@ import React from 'react';
 
 import { theme } from '../theme';
 
-const App: React.FC<AppProps> = ({ Component, pageProps }) => (
+const App: React.VFC<AppProps> = ({ Component, pageProps }) => (
   <ChakraProvider theme={theme}>
     <Component {...pageProps} />
   </ChakraProvider>

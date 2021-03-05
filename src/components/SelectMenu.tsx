@@ -13,7 +13,7 @@ type Props = {
   isEntertainmentPage?: boolean;
 };
 
-const SelectMenu: React.FC<Props> = ({
+const SelectMenu: React.VFC<Props> = ({
   isGeneralPage,
   isSportsPage,
   isSciencePage,
