@@ -3,7 +3,7 @@ import { GetStaticProps } from 'next';
 import React from 'react';
 
 import Layout from '../components/Layout';
-import { Data } from '../types';
+import { DATA } from '../types';
 
 export const getStaticProps: GetStaticProps = async () => {
   const data = await fetchData();
@@ -12,12 +12,12 @@ export const getStaticProps: GetStaticProps = async () => {
     props: {
       data,
     },
-    revalidate: 10,
+    revalidate: 100,
   };
 };
 
 type Props = {
-  data: Data;
+  data: DATA;
 };
 
 const About: React.VFC<Props> = ({ data }) => <Layout isGeneralPage data={data} />;

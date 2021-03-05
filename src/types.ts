@@ -12,13 +12,13 @@ export type NEWS_DATA = {
   content: string;
 };
 
-export type Data = {
+export type DATA = {
   status: string;
   totalResults: number;
   articles: NEWS_DATA[];
 };
 
-export type Theme = {
+export type THEME = {
   colors: {
     colorPrimary: string;
     colorAccent: string;
@@ -38,7 +38,7 @@ export type Theme = {
   };
 };
 
-export type Page = {
+export type PAGE = {
   isGeneralPage: boolean | undefined;
   isSportsPage: boolean | undefined;
   isSciencePage: boolean | undefined;
@@ -47,7 +47,7 @@ export type Page = {
   isEntertainmentPage: boolean | undefined;
 };
 
-export type PageInfo = {
+export type PAGE_INFO = {
   href: string;
   isWhere: boolean | undefined;
   LinkName: string;

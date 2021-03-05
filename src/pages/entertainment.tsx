@@ -1,7 +1,7 @@
 import { fetchData } from 'api';
 import { GetStaticProps } from 'next';
 import React from 'react';
-import { Data } from 'types';
+import { DATA } from 'types';
 
 import Layout from '../components/Layout';
 
@@ -12,12 +12,12 @@ export const getStaticProps: GetStaticProps = async () => {
     props: {
       data,
     },
-    revalidate: 10,
+    revalidate: 100,
   };
 };
 
 type Props = {
-  data: Data;
+  data: DATA;
 };
 
 const Sports: React.FC<Props> = ({ data }) => <Layout isEntertainmentPage data={data} />;

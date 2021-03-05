@@ -1,4 +1,4 @@
-import { NEWS_DATA, Page, PageInfo } from 'types';
+import { NEWS_DATA, PAGE, PAGE_INFO } from 'types';
 
 export const generateNewsUrl = (category: string): string =>
   `https://newsapi.org/v2/top-headlines?country=jp&category=${category}&pageSize=100&apiKey=${
@@ -23,7 +23,7 @@ export const createPageInfo = ({
   isHealthPage,
   isTechnologyPage,
   isEntertainmentPage,
-}: Page): PageInfo[] => [
+}: PAGE): PAGE_INFO[] => [
   {
     href: '/',
     isWhere: isGeneralPage,

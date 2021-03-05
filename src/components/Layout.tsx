@@ -1,12 +1,12 @@
 import { Flex } from '@chakra-ui/react';
 import React from 'react';
-import { Data } from 'types';
+import { DATA } from 'types';
 
 import Nav from './Nav';
 import NewsFeed from './NewsFeed';
 
 type Props = {
-  data: Data;
+  data: DATA;
   isGeneralPage?: boolean;
   isSciencePage?: boolean;
   isSportsPage?: boolean;
