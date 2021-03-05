@@ -1,10 +1,12 @@
 import { Flex } from '@chakra-ui/react';
-import React, { ReactNode } from 'react';
+import React from 'react';
+import { Data } from 'types';
 
 import Nav from './Nav';
+import NewsFeed from './NewsFeed';
 
 type Props = {
-  children: ReactNode;
+  data: Data;
   isGeneralPage?: boolean;
   isSciencePage?: boolean;
   isSportsPage?: boolean;
@@ -14,7 +16,7 @@ type Props = {
 };
 
 const Layout: React.VFC<Props> = ({
-  children,
+  data,
   isSportsPage,
   isSciencePage,
   isTechnologyPage,
@@ -39,7 +41,7 @@ const Layout: React.VFC<Props> = ({
       isTechnologyPage={isTechnologyPage}
       isEntertainmentPage={isEntertainmentPage}
     />
-    {children}
+    <NewsFeed data={data} />
   </Flex>
 );
 

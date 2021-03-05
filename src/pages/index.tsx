@@ -3,7 +3,6 @@ import { GetStaticProps } from 'next';
 import React from 'react';
 
 import Layout from '../components/Layout';
-import NewsFeed from '../components/NewsFeed';
 import { Data } from '../types';
 
 export const getStaticProps: GetStaticProps = async () => {
@@ -21,10 +20,6 @@ type Props = {
   data: Data;
 };
 
-const About: React.VFC<Props> = ({ data }) => (
-  <Layout isGeneralPage>
-    <NewsFeed data={data} />
-  </Layout>
-);
+const About: React.VFC<Props> = ({ data }) => <Layout isGeneralPage data={data} />;
 
 export default About;

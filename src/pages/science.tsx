@@ -4,7 +4,6 @@ import React from 'react';
 import { Data } from 'types';
 
 import Layout from '../components/Layout';
-import NewsFeed from '../components/NewsFeed';
 
 export const getStaticProps: GetStaticProps = async () => {
   const data = await fetchData('science');
@@ -21,10 +20,6 @@ type Props = {
   data: Data;
 };
 
-const Sports: React.FC<Props> = ({ data }) => (
-  <Layout isSciencePage>
-    <NewsFeed data={data} />
-  </Layout>
-);
+const Sports: React.FC<Props> = ({ data }) => <Layout isSciencePage data={data} />;
 
 export default Sports;
