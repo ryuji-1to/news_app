@@ -25,10 +25,10 @@ const Layout: React.VFC<Props> = ({
   isGeneralPage,
 }) => (
   <Flex
-    direction={['column', 'row']}
     h="100vh"
     w="100vw"
     maxW="1000px"
+    direction={['column', 'row']}
     overflow="hidden"
     mx="auto"
     pt={[0, 5]}

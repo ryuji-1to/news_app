@@ -21,13 +21,13 @@ const NewsCard: React.FC<Props> = ({ article }) => (
   >
     <Image
       src={article.urlToImage}
-      fallbackSrc="/noimage.jpg"
-      borderLeftRadius={9}
+      fallbackSrc="/no_image.jpg"
       boxSize={['120px', '200px']}
+      borderLeftRadius={9}
       objectFit="cover"
       mr={3}
     />
-    <Flex direction="column" p={2} h="100px" overflow="auto">
+    <Flex direction="column" p={2} h="100px" overflow="hidden">
       <Text as="h4" fontWeight="bold" fontSize={['16px', 'lengthMd1']}>
         {article.title || 'タイトルなし'}
       </Text>
