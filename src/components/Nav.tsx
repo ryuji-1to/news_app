@@ -1,4 +1,4 @@
-import { Stack } from '@chakra-ui/react';
+import { Heading, Stack } from '@chakra-ui/react';
 import { createPageInfo } from 'api';
 import React from 'react';
 
@@ -37,10 +37,13 @@ const Nav: React.VFC<Props> = ({
       as="nav"
       px={5}
       py={[5, 0]}
-      spacing={5}
+      spacing={[0, 5]}
       direction={['row', 'column']}
       justify={['space-between', 'start']}
     >
+      <Heading fontSize="28px" d={['none', 'block']}>
+        NEWS APP
+      </Heading>
       <DarkModeSwitch />
       <SelectMenu
         isSportsPage={isSportsPage}
