@@ -12,6 +12,7 @@ const LinkMenu: React.VFC<Props> = ({ pageInfo }) => (
     {pageInfo.map(({ href, isWhere, LinkName }) => (
       <NextLink href={href} key={href}>
         <Link
+          w="150px"
           color={isWhere ? 'blue.500' : undefined}
           border={isWhere ? '1px solid' : '1px solid gray'}
           fontWeight={isWhere ? 'bold' : 'normal'}
